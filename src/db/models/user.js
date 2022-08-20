@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
   });
 
-  User.beforeCreate((user)=>{
-    console.log('creando usuarios before')
+  // encrypt before create
+  User.beforeCreate(async (user) => {
     const passwordHash = await bcrypt.hash(user.password, 10);
     user.password = passwordHash;
   });
