@@ -6,7 +6,7 @@ const getPlaces = async (req, res) => {
         const url = process.env.API_URL
         const url_places = process.env.API_URL_PLACES
         const apiKey = process.env.API_KEY
-        const text = req.body.text
+        const text = req.params.text
 
         const idPlaces = await getIdPlace(text, url, apiKey)
         const places = await getRestauransInPlace(url_places, apiKey, idPlaces)
