@@ -1,7 +1,7 @@
 # Tyba Backend Engineer Test
 
 ## Setup and Running
-
+0. Rename `.env.example` to `.env` and fill the apiKey variable with the one i sent via email.
 1. Run `npm install` to install all dependencies.
 2. Run `npm run create:db` to create the database, this will use the default PostgreSQL user.
 3. To run the migrations, run `npm run db:migrate`.
